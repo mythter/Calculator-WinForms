@@ -50,7 +50,7 @@ namespace Calculator
             if (result != 0)
                 BtnEquals.PerformClick();
             else if (TxtDisplay1.Text != "")
-                result = Math.Round(double.Parse(TxtDisplay1.Text, NumberStyles.Any, CultureInfo.InvariantCulture), 7);
+                result = Math.Round(double.Parse(TxtDisplay1.Text, NumberStyles.Any, CultureInfo.InvariantCulture), 3);
 
             enterValue = true;
             if (operation == "-" && TxtDisplay1.Text == "" && TxtDisplay2.Text == "")
@@ -110,7 +110,7 @@ namespace Calculator
                 }
 
                 if (TxtDisplay1.Text != "Err")
-                    result = Math.Round(double.Parse(TxtDisplay1.Text, NumberStyles.Any, CultureInfo.InvariantCulture), 7);
+                    result = Math.Round(double.Parse(TxtDisplay1.Text, NumberStyles.Any, CultureInfo.InvariantCulture), 3);
                 else
                     result = 0;
                 operation = "";
@@ -170,7 +170,7 @@ namespace Calculator
                 {
                     case "%":
                         TxtDisplay2.Text = $"%{TxtDisplay1.Text}";
-                        TxtDisplay1.Text = Convert.ToString(Math.Round(double.Parse(TxtDisplay1.Text, NumberStyles.Any, CultureInfo.InvariantCulture) / 100.0, 7)).Replace(",", ".");
+                        TxtDisplay1.Text = Convert.ToString(Math.Round(double.Parse(TxtDisplay1.Text, NumberStyles.Any, CultureInfo.InvariantCulture) / 100.0, 3)).Replace(",", ".");
                         result = 0;
                         break;
                     case "+/-":
@@ -312,21 +312,20 @@ namespace Calculator
 
         private void TxtDisplay1KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ',' || e.KeyChar == '-' || e.KeyChar == '.')
+            if (Check())
+            {
+                e.KeyChar = (char)Keys.None;
+                return;
+            }
+
+            if (Char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '-' || e.KeyChar == '.')
             {
                 string s = TxtDisplay1.Text;
                 double num = 0;
 
-                // только для ввода ","
-                if (e.KeyChar == ',')
+                if (e.KeyChar == '.')
                 {
-                    // если "," уже есть в строке, то ввод второй "," игнорируется
-                    if (s.Contains(",") || s.Contains(".") || s.Length == 0)
-                        e.KeyChar = (char)Keys.None;
-                }
-                else if (e.KeyChar == '.')
-                {
-                    if (s.Contains(".") || s.Contains(",") || s.Length == 0)
+                    if (s.Contains(".") || s.Length == 0)
                         e.KeyChar = (char)Keys.None;
 
                     num = 0;
