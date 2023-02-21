@@ -1,1 +1,2 @@
-# Lab_1 Calculator
+# Calculator on Windows Forms
+
