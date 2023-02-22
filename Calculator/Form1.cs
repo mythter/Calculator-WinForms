@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+Файл: Form1.cs
+Лабораторная робота № 1
+Автор: Положий А. С.
+Тема: Розробка та дослідження лінійних програм
+Дата створення: 09.02.2023
+*/
+
+using System;
 using System.Drawing;
 using System.Globalization;
 using System.Runtime.InteropServices;

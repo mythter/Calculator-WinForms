@@ -70,7 +70,7 @@ namespace Calculator
             this.Btn7 = new Calculator.CustomButton();
             this.BtnMul = new Calculator.CustomButton();
             this.BtnBackSpace = new Calculator.CustomButton();
-            this.BtnBrackets = new Calculator.CustomButton();
+            this.BtnE = new Calculator.CustomButton();
             this.BtnSin = new Calculator.CustomButton();
             this.BtnC = new Calculator.CustomButton();
             this.PnlTitle.SuspendLayout();
@@ -830,26 +830,26 @@ namespace Calculator
             this.BtnBackSpace.UseVisualStyleBackColor = false;
             this.BtnBackSpace.Click += new System.EventHandler(this.BtnBackSpace_Click);
             // 
-            // BtnBrackets
+            // BtnE
             // 
-            this.BtnBrackets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.BtnBrackets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.BtnBrackets.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.BtnBrackets.BorderRadius = 65;
-            this.BtnBrackets.BorderSize = 0;
-            this.BtnBrackets.FlatAppearance.BorderSize = 0;
-            this.BtnBrackets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBrackets.Font = new System.Drawing.Font("Times New Roman", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBrackets.ForeColor = System.Drawing.Color.White;
-            this.BtnBrackets.Location = new System.Drawing.Point(212, 287);
-            this.BtnBrackets.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnBrackets.Name = "BtnBrackets";
-            this.BtnBrackets.Size = new System.Drawing.Size(65, 65);
-            this.BtnBrackets.TabIndex = 5;
-            this.BtnBrackets.Text = "e";
-            this.BtnBrackets.TextColor = System.Drawing.Color.White;
-            this.BtnBrackets.UseVisualStyleBackColor = false;
-            this.BtnBrackets.Click += new System.EventHandler(this.BtnNum_Click);
+            this.BtnE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BtnE.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BtnE.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.BtnE.BorderRadius = 65;
+            this.BtnE.BorderSize = 0;
+            this.BtnE.FlatAppearance.BorderSize = 0;
+            this.BtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnE.Font = new System.Drawing.Font("Times New Roman", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnE.ForeColor = System.Drawing.Color.White;
+            this.BtnE.Location = new System.Drawing.Point(212, 287);
+            this.BtnE.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnE.Name = "BtnE";
+            this.BtnE.Size = new System.Drawing.Size(65, 65);
+            this.BtnE.TabIndex = 5;
+            this.BtnE.Text = "e";
+            this.BtnE.TextColor = System.Drawing.Color.White;
+            this.BtnE.UseVisualStyleBackColor = false;
+            this.BtnE.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // BtnSin
             // 
@@ -926,7 +926,7 @@ namespace Calculator
             this.Controls.Add(this.Btn7);
             this.Controls.Add(this.BtnMul);
             this.Controls.Add(this.BtnBackSpace);
-            this.Controls.Add(this.BtnBrackets);
+            this.Controls.Add(this.BtnE);
             this.Controls.Add(this.BtnSin);
             this.Controls.Add(this.BtnC);
             this.Controls.Add(this.TxtDisplay1);
@@ -971,7 +971,7 @@ namespace Calculator
         private CustomButton BtnCos;
         private CustomButton BtnCE;
         private CustomButton BtnBackSpace;
-        private CustomButton BtnBrackets;
+        private CustomButton BtnE;
         private CustomButton Btn7;
         private CustomButton BtnPi;
         private CustomButton Btn8;

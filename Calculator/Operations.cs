@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+Файл: Operations.cs
+Лабораторная робота № 1
+Автор: Положий А. С.
+Тема: Розробка та дослідження лінійних програм
+Дата створення: 09.02.2023
+*/
+
+using System;
 using System.Globalization;
 
 namespace Calculator
@@ -72,7 +80,7 @@ namespace Calculator
         public static string CubeRoot(string a)
         {
             double num = double.Parse(a, NumberStyles.Any, CultureInfo.InvariantCulture);
-            if(num < 0)
+            if (num < 0)
                 return Math.Round(Math.Pow(num * -1, 1 / 3f) * -1, 3).ToString().Replace(",", ".");
             else
                 return Math.Round(Math.Pow(num, 1 / 3f), 3).ToString().Replace(",", ".");

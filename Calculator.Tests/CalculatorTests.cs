@@ -1,4 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿/*
+Файл: Calculator.Tests.cs
+Лабораторная робота № 1
+Автор: Положий А. С.
+Тема: Розробка та дослідження лінійних програм
+Дата створення: 09.02.2023
+*/
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Globalization;
 
 namespace Calculator.Tests
